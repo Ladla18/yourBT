@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Reset margin for all elements */
+      * {
+        margin: 0;
+      }
+
+      body {
+        background-image: url("https://colorlib.com/etc/bforms/colorlib-booking-19/img/background.jpg");
+        /* Replace 'your_image_url.jpg' with the URL of your image */
+        background-size: cover;
+        /* Full resolution of the image */
+        background-position: center;
+        height: 100vh;
+        /* Full height of the viewport */
+      }
+
+      /* Styles for the navigation bar */
+      ul {
+        list-style-type: none;
+        padding: 0px;
+        background-color: #0d1a44;
+        overflow: hidden;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 28px 26px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: #111;
+      }
+
+      /* Styles for the dropdown menu */
+      .dropdown {
+        display: none;
+        position: absolute;
+        background-color: #834f4f;
+        min-width: 160px;
+        z-index: 1;
+      }
+
+      .dropdown li {
+        float: none;
+      }
+
+      .dropdown a {
+        padding: 12px 16px;
+      }
+
+      li:hover .dropdown {
+        display: block;
+      }
+
+      .intro {
+        height: 390px;
+        width: 330px;
+        margin-top: 110px;
+        margin-left: 150px;
+      }
+
+      .intro h1 {
+        color: #4fa3e3;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        font-size: 52px;
+        text-transform: uppercase;
+      }
+
+      .intro p {
+        font-family: "Lato", sans-serif;
+        font-size: 32px;
+      }
+
+      .reg {
+        max-width: 642px;
+        width: 100%;
+        border: px solid;
+        margin-top: 110px;
+        margin-left: 150px;
+        margin-right: 190px;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      .sidekro {
+        display: flex;
+      }
+
+      .mainform {
+        padding: 20px 40px;
+      }
+
+      .radiobox label {
+        padding: 10px;
+      }
+      /*Yaha se Input wala starts hota hai*/
+
+      .firstrow {
+        display: flex;
+      }
+
+      .fr {
+        margin-top: 30px;
+        height: 50px;
+        width: 190px;
+        border: 1px solid;
+        border-radius: 5px;
+      }
+      .fr2 {
+        margin-top: 30px;
+        height: 50px;
+        width: 190px;
+        border: 1px solid;
+        border-radius: 5px;
+        margin-left: 50px;
+      }
+      .form-control {
+        border: none;
+        outline: none;
+        margin-top: 5px;
+      }
+
+      .form-label {
+        color: #98c9ee;
+      }
+
+      /* Yaha se select karne wala start hora hai*/
+      .thirdrow {
+        display: flex;
+        margin-top: 35px;
+        margin-bottom: 20px;
+      }
+      .thirdrow .f1 {
+        border: 1px solid grey;
+        height: 50px;
+        width: 190px;
+        border-radius: 5px;
+      }
+      .thirdrow .f2 {
+        margin-left: 35px;
+        border: 1px solid grey;
+        height: 50px;
+        width: 190px;
+        border-radius: 5px;
+      }
+      .thirdrow .f3 {
+        margin-left: 35px;
+        border: 1px solid gray;
+        height: 50px;
+        width: 190px;
+        border-radius: 5px;
+      }
+      /* Unique id starts here*/
+      #travel-class {
+        border: none;
+        outline: none;
+        margin-top: 6px;
+      }
+      #child {
+        border: none;
+        outline: none;
+        margin-top: 6px;
+      }
+      #Adults {
+        border: none;
+        outline: none;
+        margin-top: 6px;
+      }
+      /* Unique ends here*/
+      .showflightbtn {
+        background-color: #4fa3e3;
+        height: 50px;
+        width: 562px;
+        border-radius: 5px;
+      }
+      .showflightbtn .csfbtn {
+        margin-left: 210px;
+        margin-top: 15px;
+        color: white;
+        position: fixed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation Bar -->
+    <ul>
+      <li><a href="ticket.html">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li>
+        <a href="#services">Services</a>
+        <ul class="dropdown">
+          <li><a href="#train">Train</a></li>
+          <li><a href="flight.html">Flight</a></li>
+          <li><a href="#movies">Movies</a></li>
+        </ul>
+      </li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="sidekro">
+      <div class="intro">
+        <h1>BOOK YOUR</h1>
+        <h1>FLiGHT</h1>
+        <h1>TODAY</h1>
+        <p>Your Cheapes and best flight waiting for you!!</p>
+      </div>
+      <div class="reg">
+        <div class="mainform">
+          <form action="">
+            <div class="radiobox">
+              <label for="Roundtrip">
+                <input type="radio" />
+                RoundTrip</label
+              >
+              <label for="Roundtrip">
+                <input type="radio" />
+                OneWay</label
+              >
+              <label for="Roundtrip">
+                <input type="radio" />
+                Multi-City</label
+              >
+            </div>
+            <div>
+              <div class="firstrow">
+                <div class="fr">
+                  <span class="form-label">Flying from</span>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="City or airport"
+                  />
+                </div>
+                <div class="fr2">
+                  <span class="form-label">Flying to</span>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="City or airport"
+                  />
+                </div>
+              </div>
+
+              <div class="firstrow">
+                <div class="fr">
+                  <span class="form-label">Flying from</span>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="City or airport"
+                  />
+                </div>
+                <div class="fr2">
+                  <span class="form-label">Flying to</span>
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="City or airport"
+                  />
+                </div>
+              </div>
+              <div class="thirdrow">
+                <div class="f1">
+                  <div><span class="form-label">Adults 18+</span></div>
+                  <select name="adult" id="Adults">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                  </select>
+                </div>
+                <div class="f2">
+                  <div><span class="form-label">Children 0-7</span></div>
+                  <select name="child" id="child">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                  </select>
+                </div>
+                <div class="f3">
+                  <div>
+                    <label class="form-label" for="">Travel class</label>
+                  </div>
+                  <select name="travelclass" id="travel-class">
+                    <option value="">Economy</option>
+                    <option value="">Business</option>
+                  </select>
+                </div>
+              </div>
+              <div class="showflightbtn">
+                <div class="csfbtn">SHOW FLIGHTS</div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rest of your content goes here -->
+  </body>
+</html>
